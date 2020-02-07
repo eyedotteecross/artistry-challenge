@@ -1,0 +1,10 @@
+<h1><%= @artist.name %></h1>
+
+AGE: <%= @artist.age %><br>
+TITLE: <%= @artist.title %><br>
+
+<% @artist.instruments.each do |i| %>
+<%= i.name %><br>
+<% end %>
+
+<%= button_to "NEW INSTRUMENT", new_artist_instrument_path, method: :get %>
